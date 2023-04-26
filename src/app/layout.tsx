@@ -3,6 +3,7 @@ import { Metadata } from "next";
 import { Inter } from "next/font/google";
 
 import { TailwindIndicator } from "@/components";
+import { Header } from "@/components/header";
 import { siteConfig } from "@/config/site";
 import { cn } from "@/lib/utils";
 
@@ -29,8 +30,15 @@ type RootLayoutProps = {
   children: React.ReactNode;
 };
 
+const dummyNav = [
+  { label: "Something", uri: "something" },
+  { label: "Something", uri: "something" },
+  { label: "Something", uri: "something" }
+];
+
 const RootLayout = ({ children }: RootLayoutProps) => (
   <>
+    {/* TODO: Change according to current lang */}
     <html lang="en" suppressHydrationWarning>
       <head />
       <body
@@ -39,6 +47,7 @@ const RootLayout = ({ children }: RootLayoutProps) => (
           inter.variable
         )}
       >
+        <Header menuItems={dummyNav} />
         {children}
         <TailwindIndicator />
       </body>
