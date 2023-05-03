@@ -6,10 +6,10 @@ import { Seo } from "@/types";
 // prettier-ignore
 export const Meta: FC<Seo> = ({ description, keywords, title }) => (
   <Head>
-    <link href={`${process.env.NEXT_PUBLIC_URL || ''}/apple-touch-icon.png`} rel="apple-touch-icon" sizes="180x180" />
+    {/* <link href={`${process.env.NEXT_PUBLIC_URL || ''}/apple-touch-icon.png`} rel="apple-touch-icon" sizes="180x180" />
     <link href={`${process.env.NEXT_PUBLIC_URL || ''}/favicon-32x32.png`} rel="icon" sizes="32x32" type="image/png" />
     <link href={`${process.env.NEXT_PUBLIC_URL || ''}/favicon-16x16.png`} rel="icon" sizes="16x16" type="image/png" />
-    <link href={`${process.env.NEXT_PUBLIC_URL || ''}/site.webmanifest`} rel="manifest" />
+    <link href={`${process.env.NEXT_PUBLIC_URL || ''}/site.webmanifest`} rel="manifest" /> */}
     <meta content="#ffffff" name="msapplication-TileColor" />
     <meta content="#ffffff" name="theme-color" />
 
