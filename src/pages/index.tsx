@@ -1,5 +1,19 @@
-const Home = () => (
-  <main className="flex min-h-screen">
+import { NextPage } from "next";
+
+import { Layout } from "@/components";
+
+type NextPageProps = {
+  pageData: any;
+};
+
+// eslint-disable-next-line import/no-default-export, prefer-arrow/prefer-arrow-functions
+const Home: NextPage<NextPageProps> = ({}) => (
+  <Layout
+    description={"Description goes here"}
+    keywords={"Keywords go here"}
+    menuItems={[{ slug: "/", title: "Startseite" }]}
+    title={"Home Page"}
+  >
     <div className="container py-24">
       <h1 className="mb-8 text-5xl">Headline</h1>
       <div className="grid grid-cols-3 gap-3">
@@ -20,7 +34,7 @@ const Home = () => (
         </p>
       </div>
     </div>
-  </main>
+  </Layout>
 );
 
 // eslint-disable-next-line import/no-default-export

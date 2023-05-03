@@ -1,8 +1,7 @@
-"use client";
-
 import { SubmitHandler, useForm } from "react-hook-form";
 
-import { Button, Input, Select, SelectOption, Textarea } from "@/components/";
+import { Layout } from "@/components";
+import { Button, Input, Select, SelectOption, Textarea } from "@/components/ui";
 
 /* eslint-disable @typescript-eslint/member-ordering */
 type Inputs = {
@@ -41,7 +40,12 @@ const Home = () => {
   ];
 
   return (
-    <main className="flex min-h-screen flex-col  items-center justify-center p-24">
+    <Layout
+      description={"Description goes here"}
+      keywords={"Keywords go here"}
+      menuItems={[{ slug: "/", title: "Startseite" }]}
+      title={"Contact Page"}
+    >
       <form className="w-full" onSubmit={handleSubmit(onSubmit)}>
         <div className="container mb-3 grid grid-cols-3 gap-3">
           <Select
@@ -132,7 +136,7 @@ const Home = () => {
           <Button type="submit">Absenden</Button>
         </div>
       </form>
-    </main>
+    </Layout>
   );
 };
 
